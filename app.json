@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "Wordle",
+    "slug": "Wordle",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "Wordle"
+}
