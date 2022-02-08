@@ -1,6 +1,10 @@
 import styled from 'styled-components/native';
 import { colors } from '../../constants';
 
+type PropsCell = {
+  cellActive: boolean;
+};
+
 export const Container = styled.SafeAreaView`
   flex: 1;
   align-items: center;
@@ -30,14 +34,15 @@ export const Row = styled.View`
 
 export const Cell = styled.View.attrs({
   aspectRatio: 1,
-})`
+})<PropsCell>`
   flex: 1;
   justify-content: center;
   align-items: center;
 
   max-width: 70px;
   border-width: 2px;
-  border-color: ${colors.darkgrey};
+  border-color: ${({ cellActive }) =>
+    cellActive ? colors.lightgrey : colors.darkgrey};
   margin: 3px;
 `;
 
